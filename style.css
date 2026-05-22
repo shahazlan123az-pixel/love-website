@@ -1,0 +1,131 @@
+body{
+  margin:0;
+  font-family:Arial;
+  background:black;
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+  animation: fadeBody 2s ease-in;
+}
+
+/* 🎬 NETFLIX INTRO FEEL */
+@keyframes fadeBody{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+#intro{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle, rgba(0,0,0,0.6), black);
+  animation: zoomIntro 1.5s ease-in-out;
+}
+
+@keyframes zoomIntro{
+  from{transform:scale(1.2); opacity:0;}
+  to{transform:scale(1); opacity:1;}
+}
+
+h1{
+  color:pink;
+  font-size:40px;
+  text-shadow:0 0 20px pink;
+}
+
+.glow{
+  text-shadow:0 0 15px pink, 0 0 30px red;
+  letter-spacing:2px;
+}
+
+.btns button{
+  font-size:25px;
+  padding:15px 30px;
+  margin:20px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#yes{
+  background:pink;
+  box-shadow:0 0 20px pink;
+}
+
+#no{
+  background:white;
+  position:absolute;
+}
+
+#main{
+  display:none;
+  padding:20px;
+  animation: showMain 2s ease-in;
+}
+
+@keyframes showMain{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+#timer{
+  font-size:20px;
+  color:lightgreen;
+  margin:10px;
+}
+
+.para{
+  max-width:700px;
+  margin:auto;
+  padding:20px;
+  line-height:1.6;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.gallery img{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  margin:5px;
+  border-radius:15px;
+  transition:0.4s;
+  box-shadow:0 0 10px pink;
+}
+
+.gallery img:hover{
+  transform:scale(1.2);
+}
+
+.heart{
+  font-size:90px;
+  animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.3);}
+  100%{transform:scale(1);}
+}
+
+/* 🌹 FLOATING ROSES */
+.rose{
+  position:fixed;
+  top:-10px;
+  font-size:20px;
+  animation: fall linear forwards;
+  z-index:9999;
+  pointer-events:none;
+}
+
+@keyframes fall{
+  0%{transform:translateY(0) rotate(0deg); opacity:1;}
+  100%{transform:translateY(110vh) rotate(360deg); opacity:0;}
+}
